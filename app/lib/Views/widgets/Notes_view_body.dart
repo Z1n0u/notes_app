@@ -17,9 +17,25 @@ class NotesViewBody extends StatelessWidget {
             height: 60,
           ),
           CustomeAppBar(),
-          Notesitems(),
+          Expanded(child: Noteslist()),
         ],
       ),
+    );
+  }
+}
+
+class Noteslist extends StatelessWidget {
+  const Noteslist({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 16),
+          child: Notesitems(),
+        );
+      },
     );
   }
 }
