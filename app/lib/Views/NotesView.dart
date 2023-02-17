@@ -22,8 +22,8 @@ class NotesView extends StatelessWidget {
                 return const AddNotesbottumsheet();
               });
         },
-        child: const Icon(Icons.add),
         backgroundColor: KprimaryColor,
+        child: const Icon(Icons.add),
       ),
     );
   }
